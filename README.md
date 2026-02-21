@@ -27,6 +27,8 @@ makefile              Build system (GNU Make + arm-none-eabi-gcc)
 
 ## Building
 
+_the makefile is designed for Windows_
+
 Requires `arm-none-eabi-gcc` on your PATH.
 
 ```sh
