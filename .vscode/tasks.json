@@ -1,0 +1,81 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Network Core",
+            "type": "shell",
+            "command": "make CORE=net",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            }
+        },
+        {
+            "label": "Build Application Core",
+            "type": "shell",
+            "command": "make CORE=app",
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": false,
+                "clear": false
+            }
+        },
+        {
+            "label": "Flash Network Core",
+            "type": "shell",
+            "command": "make flash CORE=net",
+            "dependsOn": "Build Network Core",
+            "problemMatcher": []
+        },
+        {
+            "label": "Flash Application Core",
+            "type": "shell",
+            "command": "make flash CORE=app",
+            "dependsOn": "Build Application Core",
+            "problemMatcher": []
+        },
+        {
+            "label": "Build All",
+            "dependsOn": [
+                "Build Network Core",
+                "Build Application Core"
+            ],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Flash All",
+            "dependsOn": [
+                "Flash Network Core",
+                "Flash Application Core"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        },
+        {
+            "label": "Clean All",
+            "type": "shell",
+            "command": "make clean",
+            "problemMatcher": []
+        }
+    ]
+}

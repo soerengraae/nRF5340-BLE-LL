@@ -1,0 +1,61 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Network Core (J-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/build/net/nrf5340_net.elf",
+            "device": "nRF5340_xxAA_NET",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceFolder}/nrf5340_network.svd",
+            "preLaunchTask": "Build Network Core",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin"
+        },
+        {
+            "name": "Debug Application Core (J-Link)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/build/app/nrf5340_app.elf",
+            "device": "nRF5340_xxAA_APP",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "svdFile": "${workspaceFolder}/nrf5340_application.svd",
+            "preLaunchTask": "Build Application Core",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin"
+        },
+        {
+            "name": "Attach Network Core (J-Link)",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/build/net/nrf5340_net.elf",
+            "device": "nRF5340_xxAA_NET",
+            "interface": "swd",
+            "svdFile": "${workspaceFolder}/nrf5340_network.svd",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin"
+        },
+        {
+            "name": "Attach Application Core (J-Link)",
+            "type": "cortex-debug",
+            "request": "attach",
+            "servertype": "jlink",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/build/app/nrf5340_app.elf",
+            "device": "nRF5340_xxAA_APP",
+            "interface": "swd",
+            "svdFile": "${workspaceFolder}/nrf5340_application.svd",
+            "showDevDebugOutput": "parsed",
+            "armToolchainPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin"
+        }
+    ]
+}

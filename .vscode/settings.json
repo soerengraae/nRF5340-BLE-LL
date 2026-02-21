@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c",
+        "*.s": "arm",
+        "*.ld": "linkerscript"
+    },
+    "C_Cpp.default.compilerPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "cortex-debug.armToolchainPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin",
+    "cortex-debug.JLinkGDBServerPath": "C:/Program Files/SEGGER/JLink/JLinkGDBServerCL.exe",
+    "files.exclude": {
+        "**/build": false,
+        "**/*.o": false,
+        "**/*.d": false,
+        "**/*.map": false
+    },
+    "search.exclude": {
+        "**/build": true
+    },
+    "cortex-debug.variableUseNaturalFormat": false
+}

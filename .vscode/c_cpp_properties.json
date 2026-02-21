@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "nRF5340",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include",
+                "${workspaceFolder}/CMSIS/Include",
+                "${workspaceFolder}/startup"
+            ],
+            "defines": [
+                "NRF5340_XXAA",
+                "NRF_APPLICATION",
+                "__CORTEX_M",
+                "__CM33_REV=0x0004"
+            ],
+            "compilerPath": "C:/Program Files (x86)/Arm/GNU Toolchain mingw-w64-i686-arm-none-eabi/bin/arm-none-eabi-gcc.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "compilerArgs": [
+                "-mcpu=cortex-m33",
+                "-mthumb",
+                "-mfpu=fpv5-sp-d16",
+                "-mfloat-abi=hard"
+            ]
+        }
+    ],
+    "version": 4
+}
