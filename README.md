@@ -1,6 +1,6 @@
 # nRF5340 Bare-Metal BLE Link Layer
 
-A from-scratch BLE Link Layer implementation running on the nRF5340 network core, with no SDK or RTOS — just CMSIS headers and direct register access.
+A BLE Link Layer implementation running on the nRF5340 network core.
 
 Currently implements **non-connectable advertising** (ADV_NONCONN_IND) on all three advertising channels with configurable interval/window timing, data whitening, and CRC per the Bluetooth Core Spec 5.4.
 
@@ -51,4 +51,4 @@ Tested on the **nRF5340 DK** (PCA10095). LED1 (P0.28) toggles with advertising s
 
 ## License
 
-None specified — use at your own risk.
+Use at your own risk.
